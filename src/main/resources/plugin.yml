@@ -2,4 +2,20 @@ name: H3rCustomCommands
 version: '${project.version}'
 main: me.h3rzius.h3rcustomcommands.H3rCustomCommands
 authors: [ H3rzius ]
-description: Custom commands make by H3rzius
+description: Comandos unicos creados por H3rzius
+commands:
+  h3r:
+    description: Info basica del plugin
+    usage: /h3r
+  adios:
+    description: Te quita la vida f
+    usage: /adios
+  pvp:
+    description: (Des)Activa el PvP
+    usage: /pvp
+    permission: h3rcustomcommands.pvp
+  troll:
+    description: Troleas a un usuario con ruidos y efectos molestos
+    usage: /troll
+    permission: h3rcustomcommands.troll
+

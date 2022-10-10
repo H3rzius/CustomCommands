@@ -1,8 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
-import com.sun.org.apache.xpath.internal.objects.XNumber;
 import org.bukkit.ChatColor;
-import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,12 +11,16 @@ public class SCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (args[1] == "top") {
+            if (args.length == 0) {
+                player.setHealth(0.0);
+                player.getServer().broadcastMessage(player.getDisplayName() + ChatColor.RED + " se ha quitado la vida :(");
+                player.sendMessage("F");
+            } else if (args[0] == "top") {
                 player.setHealth(0.0);
                 player.sendMessage("F");
                 player.getServer().broadcastMessage(player.getDisplayName() + ChatColor.GOLD + " descubrio el secreto del suicide top");
-            } else if (args[1] == "time") {
-                if (args[2] == null || args[2] == "") {
+            } else if (args[0] == "time") {
+                if (args[1] == null || args[1] == "") {
                     player.sendMessage("Procedes a quitarte la vida en 10 segundos");
                     try {
                         Thread.sleep(10000);
