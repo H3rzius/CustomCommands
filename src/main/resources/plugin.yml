@@ -1,0 +1,5 @@
+name: H3rCustomCommands
+version: '${project.version}'
+main: me.h3rzius.h3rcustomcommands.H3rCustomCommands
+authors: [ H3rzius ]
+description: Custom commands make by H3rzius
