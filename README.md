@@ -1,3 +1,3 @@
-# CustomCommands
+# My own Custom Commands (only in Spanish)
 
 I was boring at school so I create this plugin to skip time and have fun.
