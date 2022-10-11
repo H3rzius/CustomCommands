@@ -1,6 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
-import me.h3rzius.h3rcustomcommands.H3rCustomCommands;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
  */
 
 public class PvPCommand implements CommandExecutor {
-    public H3rCustomCommands h3r = new H3rCustomCommands();
+    FileConfiguration config;
 
     /**
      * PvP-command to de-/activate pvp, a tool for staff members that doesn't have creative or
@@ -23,7 +23,7 @@ public class PvPCommand implements CommandExecutor {
      */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        FileConfiguration config = h3r.getConfig();
+        config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
         if (sender instanceof Player) {
             Player player = (Player) sender;
             // Player needs permissions to execute command.
@@ -43,7 +43,7 @@ public class PvPCommand implements CommandExecutor {
                 player.sendMessage(config.getString("no-permissions"));
             }
         } else {
-            ConsoleCommandSender ccs = h3r.getServer().getConsoleSender();
+            ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
             ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
         }
         return true;

@@ -9,7 +9,7 @@ commands:
     usage: /h3r
   adios:
     description: Te quita la vida f
-    usage: /adios
+    usage: /adios <top|
   pvp:
     description: (Des)Activa el PvP
     usage: /pvp

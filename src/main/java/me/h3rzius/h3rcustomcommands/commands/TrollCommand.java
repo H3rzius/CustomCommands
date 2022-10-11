@@ -1,6 +1,5 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
-import me.h3rzius.h3rcustomcommands.H3rCustomCommands;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -14,7 +13,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class TrollCommand implements CommandExecutor {
-    H3rCustomCommands h3r = new H3rCustomCommands();
+    FileConfiguration config;
 
     /**
      * Troll command executes a surround sound,
@@ -27,7 +26,7 @@ public class TrollCommand implements CommandExecutor {
      */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        FileConfiguration config = h3r.getConfig();
+        config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
@@ -54,7 +53,7 @@ public class TrollCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.GOLD + gotTrolled);
                 }
             } else {
-                ConsoleCommandSender ccs = h3r.getServer().getConsoleSender();
+                ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
                 ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
             }
         }

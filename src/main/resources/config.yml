@@ -1,4 +1,4 @@
-#                               CONFIG FILE
+#                                CONFIG FILE
 #                                 @H3rzius
 #
 #
@@ -39,6 +39,8 @@ as-console: 'Solo jugadores pueden ejecutar el comando'
 h3r-help: 'Plugin creado por H3rzius :>'
 
 # adios command part
+adios-top: '<player> descubrio el secreto del suicide top'
+adios-message: 'F'
 
 # pvp command part
 activate-pvp: 'PvP Activado'
@@ -47,4 +49,4 @@ deactivate-pvp: 'PvP Desactivado'
 # troll command part
 trolled: 'Fuiste troleado xd'
 trolled-yourself: 'Te troleaste a ti mismo xd'
-got-trolled: 'has troleado a <player>'
+got-trolled: 'Has troleado a <player>'
