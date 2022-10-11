@@ -1,0 +1,50 @@
+#                               CONFIG FILE
+#                                 @H3rzius
+#
+#
+#                                    ██
+#                                  ██░░██
+#                                ██░░░░░░██
+#                              ██░░░░░░░░░░██
+#                              ██░░░░░░░░░░██
+#                            ██░░░░░░░░░░░░░░██
+#                          ██░░░░░░██████░░░░░░██
+#                          ██░░░░░░██████░░░░░░██
+#                        ██░░░░░░░░██████░░░░░░░░██
+#                        ██░░░░░░░░██████░░░░░░░░██
+#                      ██░░░░░░░░░░██████░░░░░░░░░░██
+#                    ██░░░░░░░░░░░░██████░░░░░░░░░░░░██
+#                    ██░░░░░░░░░░░░██████░░░░░░░░░░░░██
+#                  ██░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░██
+#                  ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+#                ██░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░██
+#                ██░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░██
+#              ██░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░░░██
+#              ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+#                ██████████████████████████████████████████
+#
+#                                 WARNING:
+#
+#     Removing variables from file can fail the message output for command.
+#             If something happen, you can reinstall the plugin
+#                     deleting the plugin folder and
+#                the next server restart installs himself.
+#
+#
+# main part
+no-permissions: 'No tienes permisos para ejecutar este comando'
+as-console: 'Solo jugadores pueden ejecutar el comando'
+
+# h3r command part
+h3r-help: 'Plugin creado por H3rzius :>'
+
+# adios command part
+
+# pvp command part
+activate-pvp: 'PvP Activado'
+deactivate-pvp: 'PvP Desactivado'
+
+# troll command part
+trolled: 'Fuiste troleado xd'
+trolled-yourself: 'Te troleaste a ti mismo xd'
+got-trolled: 'has troleado a <player>'

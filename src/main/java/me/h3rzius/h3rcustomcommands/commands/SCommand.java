@@ -1,14 +1,19 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
+import me.h3rzius.h3rcustomcommands.H3rCustomCommands;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 public class SCommand implements CommandExecutor {
+    H3rCustomCommands h3r = new H3rCustomCommands();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        FileConfiguration config = h3r.getConfig();
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
@@ -49,8 +54,8 @@ public class SCommand implements CommandExecutor {
                 player.sendMessage("F");
             }
         } else {
-            System.out.println("Oye, consolas no se pueden quitarse la vida");
-            return false;
+            ConsoleCommandSender ccs = h3r.getServer().getConsoleSender();
+            ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
         }
         return true;
     }
