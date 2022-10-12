@@ -1,10 +1,8 @@
 package me.h3rzius.h3rcustomcommands;
 
 import me.h3rzius.h3rcustomcommands.commands.*;
+import me.h3rzius.h3rcustomcommands.files.StaffDataFile;
 import org.bukkit.command.ConsoleCommandSender;
-import org.bukkit.configuration.Configuration;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class H3rCustomCommands extends JavaPlugin {
@@ -12,11 +10,26 @@ public final class H3rCustomCommands extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        ConsoleCommandSender ccs = getServer().getConsoleSender();
+        // Appears by enabling plugin in console (my minecraft skin)
+        ccs.sendMessage
+                 ("   ░░░░░░░░░░░░░░░░              " + "\n"
+                 +"   ░░░░░░░░░░░░░░░░              " + "\n"
+                 +"   ░░░░▒▒░░░░▒▒░░░░   H3rzius    " + "\n"
+                 +"   ░░▒▒▒▒▒▒▒▒▒▒▒▒░░   Custom     " + "\n"
+                 +"   ▒▒██░░▒▒▒▒░░██▒▒   Commands   " + "\n"
+                 +"   ▒▒██░░▒▒▒▒░░██▒▒              " + "\n"
+                 +"   ▒▒▒▒▒▒░░░░▒▒▒▒▒▒   enabled    " + "\n"
+                 +"   ▒▒▒▒░░░░░░░░▒▒▒▒              " + "\n");
         this.saveDefaultConfig();
+        StaffDataFile.setup();
+        StaffDataFile.get().options().copyDefaults();
+        StaffDataFile.save();
         getCommand("adios").setExecutor(new SCommand());
         getCommand("pvp").setExecutor(new PvPCommand());
         getCommand("troll").setExecutor(new TrollCommand());
         getCommand("h3r").setExecutor(new H3rCommand());
+        getCommand("stafftools").setExecutor(new StaffCommand());
     }
 
     @Override

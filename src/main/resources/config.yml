@@ -1,3 +1,5 @@
+#  Github: https://github.com/H3rzius/CustomCommands
+#
 #                                CONFIG FILE
 #                                 @H3rzius
 #
@@ -50,3 +52,6 @@ deactivate-pvp: 'PvP Desactivado'
 trolled: 'Fuiste troleado xd'
 trolled-yourself: 'Te troleaste a ti mismo xd'
 got-trolled: 'Has troleado a <player>'
+
+# staff command part
+stafftools: 'PROXIMAMENTE...'
