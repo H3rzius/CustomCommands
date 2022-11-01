@@ -19,6 +19,7 @@ public class StaffDataFile {
             try {
                 file.createNewFile();
             } catch (IOException e) {
+                System.out.println("An exception has appeard:");
                 e.printStackTrace();
             }
         }

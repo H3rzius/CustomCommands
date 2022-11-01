@@ -8,10 +8,9 @@ commands:
     description: Info basica del plugin
     usage: /h3r
     aliases: h3rzius
-  adios:
-    description: Te quita la vida f
-    usage: /adios
-    aliases: ay
+  suicidetop:
+    description: suicide top?
+    usage: /suicidetop
   pvp:
     description: (Des)Activa el PvP
     usage: /pvp
