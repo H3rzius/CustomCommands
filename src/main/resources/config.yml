@@ -34,6 +34,13 @@
 # main part
 no-permissions: 'No tienes permisos para ejecutar este comando'
 as-console: 'Solo jugadores pueden ejecutar el comando'
+disable-plugin: 'Plugin deshabilitado, puede que sea un problema al cargar el plugin'
+
+#enable commands
+enable-troll-cmd: true
+enable-adios-cmd: true
+enable-pvp-cmd: true
+enable-hack-cmd: false
 
 # h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'
@@ -50,3 +57,10 @@ deactivate-pvp: 'PvP Desactivado'
 trolled: 'Fuiste troleado xd'
 trolled-yourself: 'Te troleaste a ti mismo xd'
 got-trolled: 'Has troleado a <player>'
+
+# hack command part
+hack-cmd-help: 'Usa /hack <jugador>'
+time-ban: '60d'
+time-banip: '7d'
+reason-ban: 'Uso de hacks o cliente modificado no permitido en el servidor'
+reason-banip: 'Uso de hacks... Tienes 7 días para apelar, caso contrario continua los 60 días de sanción'

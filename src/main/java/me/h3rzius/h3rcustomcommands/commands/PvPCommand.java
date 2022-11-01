@@ -24,28 +24,32 @@ public class PvPCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            // Player needs permissions to execute command.
-            if (player.hasPermission("h3rcustomcommands.pvp")) {
-                boolean pvpActivator = player.getLocation().getWorld().getPVP();
-                if (pvpActivator) {
-                    //If PvP are activated, it will deactivate
-                    player.getLocation().getWorld().setPVP(false);
-                    player.sendMessage(ChatColor.GREEN + config.getString("deactivate-pvp"));
+        if (config.getBoolean("enable-pvp-cmd")) {
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                // Player needs permissions to execute command.
+                if (player.hasPermission("h3rcustomcommands.pvp")) {
+                    boolean pvpActivator = player.getLocation().getWorld().getPVP();
+                    if (pvpActivator) {
+                        //If PvP are activated, it will deactivate
+                        player.getLocation().getWorld().setPVP(false);
+                        player.sendMessage(ChatColor.GREEN + config.getString("deactivate-pvp"));
+                    } else {
+                        //else it will activate
+                        player.getLocation().getWorld().setPVP(true);
+                        player.sendMessage(ChatColor.RED + config.getString("activate-pvp"));
+                    }
                 } else {
-                    //else it will activate
-                    player.getLocation().getWorld().setPVP(true);
-                    player.sendMessage(ChatColor.RED + config.getString("activate-pvp"));
+                    //
+                    player.sendMessage(config.getString("no-permissions"));
                 }
             } else {
-                //
-                player.sendMessage(config.getString("no-permissions"));
+                ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
+                ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
             }
+            return true;
         } else {
-            ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
-            ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
+            return false;
         }
-        return true;
     }
 }

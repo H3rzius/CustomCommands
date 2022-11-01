@@ -17,18 +17,15 @@ public final class H3rCustomCommands extends JavaPlugin {
         getCommand("pvp").setExecutor(new PvPCommand());
         getCommand("troll").setExecutor(new TrollCommand());
         getCommand("h3r").setExecutor(new H3rCommand());
+        getCommand("hack").setExecutor(new HackCommand());
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         ConsoleCommandSender ccs = getServer().getConsoleSender();
-        ccs.sendMessage("Plugin deshabilitado, puede que sea un problema al cargar el plugin");
+        ccs.sendMessage("");
         System.out.println("disabled plugin, check out the logs to inspect what fails to load the plugin");
-    }
-
-    public void configFile() {
-
     }
 
 }
