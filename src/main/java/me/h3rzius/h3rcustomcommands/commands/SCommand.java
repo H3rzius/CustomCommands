@@ -23,17 +23,21 @@ public class SCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            player.setHealth(0.0);
-            player.sendMessage("F");
-            String adiosTop = config.getString("adios-top");
-            adiosTop = adiosTop.replaceAll("<player>", player.getDisplayName());
-            player.getServer().broadcastMessage(ChatColor.GOLD + adiosTop);
+        if (config.getBoolean("enable-adios-cmd")) {
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                player.setHealth(0.0);
+                player.sendMessage("F");
+                String adiosTop = config.getString("adios-top");
+                adiosTop = adiosTop.replaceAll("<player>", player.getDisplayName());
+                player.getServer().broadcastMessage(ChatColor.GOLD + adiosTop);
+            } else {
+                ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
+                ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
+            }
+            return true;
         } else {
-            ConsoleCommandSender ccs = Bukkit.getServer().getConsoleSender();
-            ccs.sendMessage(ChatColor.RED + config.getString("as-console"));
+            return false;
         }
-        return true;
     }
 }
