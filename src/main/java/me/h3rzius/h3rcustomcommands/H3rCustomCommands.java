@@ -12,15 +12,15 @@ public final class H3rCustomCommands extends JavaPlugin {
         // Plugin startup logic
         ConsoleCommandSender ccs = getServer().getConsoleSender();
         // Appears by enabling plugin in console (my minecraft skin)
-        ccs.sendMessage
-                 ("   ░░░░░░░░░░░░░░░░              " + "\n"
-                 +"   ░░░░░░░░░░░░░░░░              " + "\n"
-                 +"   ░░░░▒▒░░░░▒▒░░░░   H3rzius    " + "\n"
-                 +"   ░░▒▒▒▒▒▒▒▒▒▒▒▒░░   Custom     " + "\n"
-                 +"   ▒▒██░░▒▒▒▒░░██▒▒   Commands   " + "\n"
-                 +"   ▒▒██░░▒▒▒▒░░██▒▒              " + "\n"
-                 +"   ▒▒▒▒▒▒░░░░▒▒▒▒▒▒   enabled    " + "\n"
-                 +"   ▒▒▒▒░░░░░░░░▒▒▒▒              " + "\n");
+        ccs.sendMessage(
+                "   ░░░░░░░░░░░░░░░░              " + "\n"
+                 + "   ░░░░░░░░░░░░░░░░              " + "\n"
+                 + "   ░░░░▒▒░░░░▒▒░░░░   H3rzius    " + "\n"
+                 + "   ░░▒▒▒▒▒▒▒▒▒▒▒▒░░   Custom     " + "\n"
+                 + "   ▒▒██░░▒▒▒▒░░██▒▒   Commands   " + "\n"
+                 + "   ▒▒██░░▒▒▒▒░░██▒▒              " + "\n"
+                 + "   ▒▒▒▒▒▒░░░░▒▒▒▒▒▒   enabled    " + "\n"
+                 + "   ▒▒▒▒░░░░░░░░▒▒▒▒              " + "\n");
         this.saveDefaultConfig();
         StaffDataFile.setup();
         StaffDataFile.get().options().copyDefaults();
