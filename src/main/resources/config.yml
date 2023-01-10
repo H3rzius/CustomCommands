@@ -61,7 +61,9 @@ trolled-yourself: 'Te troleaste a ti mismo xd'
 got-trolled: 'Has troleado a <player>'
 
 # staff command part
-stafftools: 'PROXIMAMENTE...'
+stafftools-activate: 'Modo Staff se ha activado'
+stafftools-deactivate: 'Modo Staff se ha desactivado'
+cant-save-data: 'El archivo staffdata.yml no pudo guardarse:'
 
 # hack command part
 hack-cmd-help: 'Usa /hack <jugador>'
