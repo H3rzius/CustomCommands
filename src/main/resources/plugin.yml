@@ -6,7 +6,8 @@ description: Comandos unicos creados por H3rzius
 commands:
   h3r:
     description: Info basica del plugin
-    usage: /h3r
+    usage: /h3r [reload/help/check]
+    default: true
     aliases: h3rzius
   suicidetop:
     description: suicide top?
@@ -23,7 +24,7 @@ commands:
     permission: h3rcustomcommands.troll
   stafftools:
     description: Abres el panel de staffs
-    usage: /stafftools
+    usage: /stafftools [warp]
     aliases: [stafft, staff]
     permission: h3rcustomcommands.stafftools
   hack:

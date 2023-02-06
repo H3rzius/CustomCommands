@@ -30,14 +30,20 @@ public class HackCommand implements CommandExecutor {
             String reason = config.getString("reason-ban");
             String reasonIP = config.getString("reason-banip");
             /** Check if player or console has permissions to execute this cmd */
-            if (sender.hasPermission("h3rcustomcommands.hack")) {
+            if (!sender.hasPermission("h3rcustomcommands.hack") || !(sender instanceof ConsoleCommandSender)) {
+                sender.sendMessage(config.getString("no-permissions"));
+                return false;
+            } else {
                 if (args.length == 0) {
                     sender.sendMessage(ChatColor.RED + config.getString("hack-cmd-help"));
-                } else {
+                    return false;
+                }
+                if (args.length > 0) {
                     Player p = Bukkit.getPlayer(args[0]);
                     String ip = p.getAddress().getHostString();
                     Bukkit.dispatchCommand(sender, "ban -s " + p + " " + timeBan + " " + reason);
                     Bukkit.dispatchCommand(sender, "ban-ip -s " + ip + " " + timeBanIP + " " + reasonIP);
+                    return true;
                 }
             }
             return true;
