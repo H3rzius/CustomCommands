@@ -6,7 +6,7 @@
 
     <groupId>me.H3rzius</groupId>
     <artifactId>H3rCustomCommands</artifactId>
-    <version>1.1.9</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>H3rCustomCommands</name>

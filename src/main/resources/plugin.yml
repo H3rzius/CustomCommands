@@ -6,7 +6,8 @@ description: Comandos unicos creados por H3rzius
 commands:
   h3r:
     description: Info basica del plugin
-    usage: /h3r
+    usage: /h3r [reload/help/check]
+    default: true
     aliases: h3rzius
   h3r master:
     description: Master info from plugin
@@ -40,11 +41,11 @@ commands:
 
   stafftools:
     description: Abres el panel de staffs
-    usage: /stafftools
+    usage: /stafftools [warp]
     aliases: [stafft, staff]
     permission: h3rcustomcommands.stafftools
 
   hack:
     description: Sends a custome ban for hackers
-    usage: /hack <nickname>
+    usage: /hack <player> <reason>
     permission: h3rcustomcommands.hack
