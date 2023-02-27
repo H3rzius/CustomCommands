@@ -46,6 +46,8 @@ enable-hack-cmd: false
 
 # h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'
+h3r-status: 'Jugador: %player_name%'
+h3r-easteregg: 'H3rzius pasó por aquí'
 
 # adios command part
 adios-top: '<player> descubrio el secreto del suicide top'

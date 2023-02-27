@@ -8,24 +8,42 @@ commands:
     description: Info basica del plugin
     usage: /h3r
     aliases: h3rzius
+  h3r master:
+    description: Master info from plugin
+    usage: /h3r master
+    permission: h3rcustomcommands.h3r.master
+  h3r reload:
+    description: Reload config
+    usage: /h3r relaod
+  h3r status:
+    description: Simple status
+    usage: /h3r status
+  h3r easteregg:
+    description: an easter egg
+    usage: /h3r easteregg
+
   suicidetop:
     description: suicide top?
     usage: /suicidetop
+
   pvp:
     description: (Des)Activa el PvP
     usage: /pvp
     aliases: [tpvp, apvp]
     permission: h3rcustomcommands.pvp
+
   troll:
     description: Troleas a un usuario con ruidos y efectos molestos
     usage: /troll
     aliases: [jaja, xd]
     permission: h3rcustomcommands.troll
+
   stafftools:
     description: Abres el panel de staffs
     usage: /stafftools
     aliases: [stafft, staff]
     permission: h3rcustomcommands.stafftools
+
   hack:
     description: Sends a custome ban for hackers
     usage: /hack <nickname>
