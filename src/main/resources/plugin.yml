@@ -29,5 +29,5 @@ commands:
     permission: h3rcustomcommands.stafftools
   hack:
     description: Sends a custome ban for hackers
-    usage: /hack <nickname>
+    usage: /hack <player> <reason>
     permission: h3rcustomcommands.hack
