@@ -33,6 +33,7 @@ public final class H3rCustomCommands extends JavaPlugin {
         getCommand("h3r").setExecutor(new H3rCommand());
         getCommand("stafftools").setExecutor(new StaffCommand());
         getCommand("hack").setExecutor(new HackCommand());
+        getCommand("survey").setExecutor(new SurveyCommand());
     }
 
     @Override

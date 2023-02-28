@@ -79,8 +79,6 @@ reason-banip: 'Tienes 7 días para apelar. Baneo original: 60 Días'
 
 # survey command part
 survey: '[SURVEY]'
-survey-cmd-1: 'yes'
-survey-cmd-2: 'no'
 survey-player: 'players'
 survey-answer: 'Answer with /yes or /no'
 survey-yes: 'says yes'

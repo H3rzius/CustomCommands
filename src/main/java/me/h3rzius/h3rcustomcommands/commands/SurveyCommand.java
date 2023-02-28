@@ -36,17 +36,22 @@ public class SurveyCommand implements CommandExecutor {
             }
 
             surveyTitle = args[0];
-            String surveyQuestion = String.join(" ", args);
+            String text = args[0];
+            text = text.replace(surveyTitle, "");
+            String surveyQuestion = String.join(" ", text);
 
             Bukkit.broadcastMessage(
-                      ChatColor.GREEN
-                    + config.getString("survey")
-                    + " "
+                  ChatColor.GREEN
+                + config.getString("survey")
+                  + " "
+                  + ChatColor.YELLOW
+                  + surveyTitle
+                    + ": "
                     + ChatColor.AQUA
                     + surveyQuestion
-                    + ". "
-                    + ChatColor.GREEN
-                    + config.getString("survey-answer")
+                        + ". "
+                        + ChatColor.GREEN
+                        + config.getString("survey-answer")
             );
 
             surveyInProgress = true;
@@ -83,7 +88,7 @@ public class SurveyCommand implements CommandExecutor {
             return true;
         }
 
-        return false;
+        return true;
     }
 
     private void endSurvey() {

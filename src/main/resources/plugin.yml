@@ -9,19 +9,6 @@ commands:
     usage: /h3r [reload/help/check]
     default: true
     aliases: h3rzius
-  h3r master:
-    description: Master info from plugin
-    usage: /h3r master
-    permission: h3rcustomcommands.h3r.master
-  h3r reload:
-    description: Reload config
-    usage: /h3r relaod
-  h3r status:
-    description: Simple status
-    usage: /h3r status
-  h3r easteregg:
-    description: an easter egg
-    usage: /h3r easteregg
 
   suicidetop:
     description: suicide top?
@@ -52,7 +39,7 @@ commands:
 
   survey:
     description: Creates a survey and users can participate
-    usage: /survey <titlename> <args>
+    usage: /survey <title> <question>
     aliases:
       - encuesta
       - pregunta

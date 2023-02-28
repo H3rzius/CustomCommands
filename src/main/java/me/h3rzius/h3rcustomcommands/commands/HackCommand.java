@@ -74,7 +74,7 @@ public class HackCommand implements CommandExecutor {
                         sender.sendMessage("Player not found.");
                     }
                 } else {
-                    sender.sendMessage("Usage: /hack <player> <reason>");
+                    sender.sendMessage("Usage: /hack [-r <reason>] <player>");
                 }
                 return true;
             } else {
