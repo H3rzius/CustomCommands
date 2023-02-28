@@ -35,14 +35,17 @@
 #
 # main part
 no-permissions: 'No tienes permisos para ejecutar este comando'
+player-not-entered: 'nunca ha entrado al servidor!'
 as-console: 'Solo jugadores pueden ejecutar el comando'
 disable-plugin: 'Plugin deshabilitado, puede que sea un problema al cargar el plugin'
+reload: 'El plugin ha sido recargado'
+reload-failed: 'El plugin no pudo recargar, no existe ese plugin'
 
 #enable commands
 enable-troll-cmd: true
 enable-adios-cmd: true
 enable-pvp-cmd: true
-enable-hack-cmd: false
+enable-hack-cmd: true
 
 # h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'
@@ -72,4 +75,14 @@ hack-cmd-help: 'Usa /hack <jugador>'
 time-ban: '60d'
 time-banip: '7d'
 reason-ban: 'Uso de hacks o cliente modificado no permitido en el servidor'
-reason-banip: 'Uso de hacks... Tienes 7 días para apelar, caso contrario continua los 60 días de sanción'
+reason-banip: 'Tienes 7 días para apelar. Baneo original: 60 Días'
+
+# survey command part
+survey: '[SURVEY]'
+survey-cmd-1: 'yes'
+survey-cmd-2: 'no'
+survey-player: 'players'
+survey-answer: 'Answer with /yes or /no'
+survey-yes: 'says yes'
+survey-no: 'says no'
+no-surveys: 'There is no survey in progress.'

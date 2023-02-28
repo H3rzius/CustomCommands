@@ -7,20 +7,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class H3rCustomCommands extends JavaPlugin {
 
+    private static H3rCustomCommands instance;
     @Override
     public void onEnable() {
+        instance = this;
         // Plugin startup logic
         ConsoleCommandSender ccs = getServer().getConsoleSender();
         // Appears by enabling plugin in console (my minecraft skin)
         ccs.sendMessage(
-                "   ░░░░░░░░░░░░░░░░              " + "\n"
-                 + "   ░░░░░░░░░░░░░░░░              " + "\n"
-                 + "   ░░░░▒▒░░░░▒▒░░░░   H3rzius    " + "\n"
-                 + "   ░░▒▒▒▒▒▒▒▒▒▒▒▒░░   Custom     " + "\n"
-                 + "   ▒▒██░░▒▒▒▒░░██▒▒   Commands   " + "\n"
-                 + "   ▒▒██░░▒▒▒▒░░██▒▒              " + "\n"
-                 + "   ▒▒▒▒▒▒░░░░▒▒▒▒▒▒   enabled    " + "\n"
-                 + "   ▒▒▒▒░░░░░░░░▒▒▒▒              " + "\n");
+                    "   ░░░░░░░░░░░░░░░░              " + "\n"
+                 +  "   ░░░░░░░░░░░░░░░░              " + "\n"
+                 +  "   ░░░░▒▒░░░░▒▒░░░░   H3rzius    " + "\n"
+                 +  "   ░░▒▒▒▒▒▒▒▒▒▒▒▒░░   Custom     " + "\n"
+                 +  "   ▒▒██░░▒▒▒▒░░██▒▒   Commands   " + "\n"
+                 +  "   ▒▒██░░▒▒▒▒░░██▒▒              " + "\n"
+                 +  "   ▒▒▒▒▒▒░░░░▒▒▒▒▒▒   enabled    " + "\n"
+                 +  "   ▒▒▒▒░░░░░░░░▒▒▒▒              " + "\n");
         this.saveDefaultConfig();
         StaffDataFile.setup();
         StaffDataFile.get().options().copyDefaults();
@@ -39,6 +41,10 @@ public final class H3rCustomCommands extends JavaPlugin {
         ConsoleCommandSender ccs = getServer().getConsoleSender();
         ccs.sendMessage("");
         System.out.println("disabled plugin, check out the logs to inspect what fails to load the plugin");
+    }
+
+    public static H3rCustomCommands getInstance() {
+        return instance;
     }
 
 }
