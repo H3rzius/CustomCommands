@@ -28,6 +28,7 @@ public final class H3rCustomCommands extends JavaPlugin {
         StaffDataFile.get().options().copyDefaults();
         StaffDataFile.save();
         getCommand("suicidetop").setExecutor(new SCommand());
+        getCommand("turnswitch").setExecutor(new SwitchCommand());
         getCommand("pvp").setExecutor(new PvPCommand());
         getCommand("troll").setExecutor(new TrollCommand());
         getCommand("h3r").setExecutor(new H3rCommand());

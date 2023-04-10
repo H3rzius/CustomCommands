@@ -14,6 +14,12 @@ commands:
     description: suicide top?
     usage: /suicidetop
 
+  turnswitch:
+    description: enables or disables an command from CustomCommands
+    usage: /turnswitch
+    aliases: [activar, desactivar]
+    permission: h3rcustomcommands.switch
+
   pvp:
     description: (Des)Activa el PvP
     usage: /pvp
@@ -39,7 +45,7 @@ commands:
 
   survey:
     description: Creates a survey and users can participate
-    usage: /survey <title> <question>
+    usage: /survey [yes/no] <title> <question>
     aliases:
       - encuesta
       - pregunta

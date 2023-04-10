@@ -42,10 +42,10 @@ reload: 'El plugin ha sido recargado'
 reload-failed: 'El plugin no pudo recargar, no existe ese plugin'
 
 #enable commands
-enable-troll-cmd: true
-enable-adios-cmd: true
-enable-pvp-cmd: true
-enable-hack-cmd: true
+enable-troll: true
+enable-adios: true
+enable-pvp: true
+enable-hack: true
 
 # h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'
@@ -55,6 +55,13 @@ h3r-easteregg: 'H3rzius pasó por aquí'
 # adios command part
 adios-top: '<player> descubrio el secreto del suicide top'
 adios-message: 'F'
+
+# turnswitch command part
+no-command-to-switch: 'Necesitas escribir el comando que quieras (des)activar.'
+switched-successfully: 'El comando <cmd> ha sido <switch>'
+switch-active: 'activado'
+switch-deactivate: 'desactivado'
+switch-cmd-unknown: '>desconocido<'
 
 # pvp command part
 activate-pvp: 'PvP Activado'
@@ -80,7 +87,7 @@ reason-banip: 'Tienes 7 días para apelar. Baneo original: 60 Días'
 # survey command part
 survey: '[SURVEY]'
 survey-player: 'players'
-survey-answer: 'Answer with /yes or /no'
+survey-answer: 'Answer with </survey yes> or </survey no>'
 survey-yes: 'says yes'
 survey-no: 'says no'
 no-surveys: 'There is no survey in progress.'

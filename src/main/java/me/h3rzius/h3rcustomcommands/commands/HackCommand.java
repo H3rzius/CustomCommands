@@ -29,7 +29,7 @@ public class HackCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("hack")) {
-            if (config.getBoolean("enable-hack-cmd")) {
+            if (config.getBoolean("enable-hack")) {
                 if (args.length < 1) {
                     sender.sendMessage("Usage: /hack [-r <reason>] <player>");
                     return true;

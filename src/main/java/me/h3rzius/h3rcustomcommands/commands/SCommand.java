@@ -23,7 +23,7 @@ public class SCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
-        if (config.getBoolean("enable-adios-cmd")) {
+        if (config.getBoolean("enable-adios")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 player.setHealth(0.0);

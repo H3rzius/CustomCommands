@@ -27,7 +27,7 @@ public class TrollCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
-        if (config.getBoolean("enable-troll-cmd")) {
+        if (config.getBoolean("enable-troll")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
 

@@ -61,33 +61,31 @@ public class SurveyCommand implements CommandExecutor {
                 Bukkit.broadcastMessage(
                         ChatColor.GREEN + config.getString("survey")
                                 + " " + yesCount + " " + config.getString("survey-player")
-                                + " " + config.getString("survey")
+                                + " " + config.getString("survey-yes")
                                 + " | " + noCount + " " + config.getString("survey-player")
-                                + " " + config.getString("survey")
+                                + " " + config.getString("survey-no")
                 );
             }, 60 * 20);
+            if (args[0].equalsIgnoreCase("yes") || args[0].equalsIgnoreCase("no")) {
+                Player player = (Player) sender;
 
-            return true;
-        } else if (cmd.getName().equalsIgnoreCase(config.getString("survey-cmd-1")) || cmd.getName().equalsIgnoreCase(config.getString("survey-cmd-1"))) {
-            Player player = (Player) sender;
+                if (!surveyInProgress) {
+                    player.sendMessage(config.getString("no-surveys"));
+                    return true;
+                }
 
-            if (!surveyInProgress) {
-                player.sendMessage(config.getString("no-surveys"));
+                boolean answer = args[0].equalsIgnoreCase("yes");
+                surveyAnswers.put(player.getUniqueId(), answer);
+
+                if (answer) {
+                    yesCount++;
+                } else {
+                    noCount++;
+                }
+
                 return true;
             }
-
-            boolean answer = cmd.getName().equalsIgnoreCase(config.getString("survey-cmd-1"));
-            surveyAnswers.put(player.getUniqueId(), answer);
-
-            if (answer) {
-                yesCount++;
-            } else {
-                noCount++;
-            }
-
-            return true;
         }
-
         return true;
     }
 
