@@ -28,12 +28,12 @@ public final class H3rCustomCommands extends JavaPlugin {
         StaffDataFile.get().options().copyDefaults();
         StaffDataFile.save();
         getCommand("suicidetop").setExecutor(new SCommand());
-        getCommand("turnswitch").setExecutor(new SwitchCommand());
+        //getCommand("turnswitch").setExecutor(new SwitchCommand());
         getCommand("pvp").setExecutor(new PvPCommand());
         getCommand("troll").setExecutor(new TrollCommand());
         getCommand("h3r").setExecutor(new H3rCommand());
         getCommand("stafftools").setExecutor(new StaffCommand());
-        getCommand("hack").setExecutor(new HackCommand());
+        //getCommand("hack").setExecutor(new HackCommand());
         getCommand("survey").setExecutor(new SurveyCommand());
     }
 

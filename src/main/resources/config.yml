@@ -40,6 +40,7 @@ as-console: 'Solo jugadores pueden ejecutar el comando'
 disable-plugin: 'Plugin deshabilitado, puede que sea un problema al cargar el plugin'
 reload: 'El plugin ha sido recargado'
 reload-failed: 'El plugin no pudo recargar, no existe ese plugin'
+command-disabled: 'El comando que elegiste está desactivado'
 
 #enable commands
 enable-troll: true
@@ -59,7 +60,8 @@ adios-message: 'F'
 # turnswitch command part
 no-command-to-switch: 'Necesitas escribir el comando que quieras (des)activar.'
 switched-successfully: 'El comando <cmd> ha sido <switch>'
-switch-active: 'activado'
+has-been-switched: 'El comando <cmd> ya había sido <switch>'
+switch-activate: 'activado'
 switch-deactivate: 'desactivado'
 switch-cmd-unknown: '>desconocido<'
 

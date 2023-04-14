@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-
+@Deprecated
 public class SwitchCommand implements CommandExecutor {
     FileConfiguration config = Bukkit.getServer().getPluginManager().getPlugin("H3rCustomCommands").getConfig();
     @Override
@@ -31,7 +31,7 @@ public class SwitchCommand implements CommandExecutor {
                 config.set(cmd, true);
                 String response = config.getString("switched-successfully");
                 response.replaceAll("<cmd>", args[0]);
-                response.replaceAll("<switch>", config.getString("switch-deactivate"));
+                response.replaceAll("<switch>", config.getString("switch-activate"));
                 player.sendMessage(ChatColor.GREEN + response);
             }
             return true;
