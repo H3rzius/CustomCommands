@@ -6,19 +6,13 @@ description: Comandos unicos creados por H3rzius
 commands:
   h3r:
     description: Info basica del plugin
-    usage: /h3r <reload/help/hack/enable/disable>
+    usage: /h3r <reload/help/hack/switch/survey>
     default: true
     aliases: h3rzius
 
   suicidetop:
     description: suicide top?
     usage: /suicidetop
-
-  #turnswitch:
-    #description: enables or disables an command from CustomCommands
-    #usage: /turnswitch
-    #aliases: [activar, desactivar]
-    #permission: h3rcustomcommands.switch
 
   pvp:
     description: (Des)Activa el PvP
@@ -37,11 +31,6 @@ commands:
     usage: /stafftools [warp]
     aliases: [stafft, staff]
     permission: h3rcustomcommands.stafftools
-
-  #hack:
-    #description: Sends a custome ban for hackers
-    #usage: /hack [-r <reason>] <player>
-    #permission: h3rcustomcommands.hack
 
   survey:
     description: Creates a survey and users can participate

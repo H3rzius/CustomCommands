@@ -1,13 +1,4 @@
-#  Config file, please be careful what you change
-
-locale: 'es'
-
-enable-troll: true
-enable-adios: true
-enable-pvp: true
-enable-hack: true
-enable-survey: true
-
+# Plugin en español hecho por H3rzius :>
 # main part
 no-permissions: 'No tienes permisos para ejecutar este comando'
 player-not-entered: 'nunca ha entrado al servidor!'

@@ -1,5 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
+import me.h3rzius.h3rcustomcommands.files.LangFile;
 import me.h3rzius.h3rcustomcommands.files.StaffDataFile;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -19,6 +20,7 @@ public class StaffCommand implements CommandExecutor {
 
     File file;
     FileConfiguration config;
+    FileConfiguration lang = LangFile.get();
     StaffDataFile staffData;
 
     boolean isCommandActivated = false;

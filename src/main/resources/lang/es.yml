@@ -1,14 +1,4 @@
-#  Config file, please be careful what you change
-
-locale: 'es'
-
-enable-troll: true
-enable-adios: true
-enable-pvp: true
-enable-hack: true
-enable-survey: true
-
-# main part
+# Plugin en español hecho por H3rzius :>
 no-permissions: 'No tienes permisos para ejecutar este comando'
 player-not-entered: 'nunca ha entrado al servidor!'
 as-console: 'Solo jugadores pueden ejecutar el comando'
@@ -16,45 +6,29 @@ disable-plugin: 'Plugin deshabilitado, puede que sea un problema al cargar el pl
 reload: 'El plugin ha sido recargado'
 reload-failed: 'El plugin no pudo recargar, no existe ese plugin'
 command-disabled: 'El comando que elegiste está desactivado'
-
-# h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'
 h3r-status: 'Jugador: %player_name%'
 h3r-easteregg: 'H3rzius pasó por aquí'
-
-# adios command part
 adios-top: '<player> descubrio el secreto del suicide top'
 adios-message: 'F'
-
-# switch command part
 no-command-to-switch: 'Necesitas escribir el comando que quieras (des)activar.'
 switched-successfully: 'El comando <cmd> ha sido <switch>'
 switch-activate: 'activado'
 switch-deactivate: 'desactivado'
 switch-cmd-unknown: '>desconocido<'
-
-# pvp command part
 activate-pvp: 'PvP Activado'
 deactivate-pvp: 'PvP Desactivado'
-
-# troll command part
 trolled: 'Fuiste troleado xd'
 trolled-yourself: 'Te troleaste a ti mismo xd'
 got-trolled: 'Has troleado a <player>'
-
-# staff command part
 stafftools-activate: 'Modo Staff se ha activado'
 stafftools-deactivate: 'Modo Staff se ha desactivado'
 cant-save-data: 'El archivo staffdata.yml no pudo guardarse:'
-
-# hack command part
 hack-cmd-help: 'Usa /hack <jugador>'
 time-ban: '60d'
 time-banip: '7d'
 reason-ban: 'Uso de hacks o cliente modificado no permitido en el servidor'
 reason-banip: 'Tienes 7 días para apelar. Baneo original: 60 Días'
-
-# survey command part
 survey: '[SURVEY]'
 survey-player: 'players'
 survey-answer: 'Answer with </survey yes> or </survey no>'

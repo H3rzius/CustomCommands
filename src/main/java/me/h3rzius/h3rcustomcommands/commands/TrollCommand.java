@@ -1,5 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
+import me.h3rzius.h3rcustomcommands.files.LangFile;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -14,6 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class TrollCommand implements CommandExecutor {
     FileConfiguration config;
+    FileConfiguration lang = LangFile.get();
 
     /**
      * Troll command executes a surround sound,
@@ -36,7 +38,7 @@ public class TrollCommand implements CommandExecutor {
                     // If user doesn't writes a nickname, he will troll himself.
                     if (args.length == 0) {
                         //player.getWorld().strikeLightning(player.getLocation());
-                        player.getLocation().getWorld().playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_SPAWN, 50.0F, 1.0F);
+                        player.getLocation().getWorld().playSound(player.getLocation(), Sound.WITHER_DEATH, 50.0F, 1.0F);
                         player.setHealth(1.0);
                         player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 5));
                         player.sendMessage(ChatColor.BOLD + "Te troleaste a ti mismo xD");
@@ -47,7 +49,7 @@ public class TrollCommand implements CommandExecutor {
                         String gotTrolled = config.getString("got-trolled");
                         gotTrolled.replaceAll("<player>", player2.getDisplayName());
                         //player2.getWorld().strikeLightning(player.getLocation());
-                        player2.getLocation().getWorld().playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_SPAWN, 50.0F, 1.0F);
+                        player2.getLocation().getWorld().playSound(player.getLocation(), Sound.WITHER_DEATH, 50.0F, 1.0F);
                         player2.setHealth(1.0);
                         player2.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 5));
                         player2.sendMessage(ChatColor.BOLD + "Fuiste troleado xD");

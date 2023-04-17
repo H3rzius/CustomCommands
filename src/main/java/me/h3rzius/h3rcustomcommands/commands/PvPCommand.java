@@ -1,5 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
+import me.h3rzius.h3rcustomcommands.files.LangFile;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -15,6 +16,7 @@ import org.bukkit.entity.Player;
 
 public class PvPCommand implements CommandExecutor {
     FileConfiguration config;
+    FileConfiguration lang = LangFile.get();
 
     /**
      * PvP-command to de-/activate pvp, a tool for staff members that doesn't have creative or

@@ -1,5 +1,6 @@
 package me.h3rzius.h3rcustomcommands.commands;
 
+import me.h3rzius.h3rcustomcommands.files.LangFile;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -11,6 +12,7 @@ import org.bukkit.entity.Player;
 
 public class SCommand implements CommandExecutor {
     FileConfiguration config;
+    FileConfiguration lang = LangFile.get();
 
     /**
      *
