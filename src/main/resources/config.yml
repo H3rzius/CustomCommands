@@ -16,6 +16,7 @@ disable-plugin: 'Plugin deshabilitado, puede que sea un problema al cargar el pl
 reload: 'El plugin ha sido recargado'
 reload-failed: 'El plugin no pudo recargar, no existe ese plugin'
 command-disabled: 'El comando que elegiste está desactivado'
+prevent-spectator-teleport: 'No puedes teletransportarte en el modo espectador!'
 
 # h3r command part
 h3r-help: 'Plugin creado por H3rzius :>'

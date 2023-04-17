@@ -1,6 +1,7 @@
 package me.h3rzius.h3rcustomcommands;
 
 import me.h3rzius.h3rcustomcommands.commands.*;
+import me.h3rzius.h3rcustomcommands.events.BlockSpectatorTeleportEvent;
 import me.h3rzius.h3rcustomcommands.files.LangFile;
 import me.h3rzius.h3rcustomcommands.files.StaffDataFile;
 import org.bukkit.command.ConsoleCommandSender;
@@ -10,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class H3rCustomCommands extends JavaPlugin {
 
     private static H3rCustomCommands instance;
+    private BlockSpectatorTeleportEvent bste = new BlockSpectatorTeleportEvent();
 
     @Override
     public void onEnable() {
